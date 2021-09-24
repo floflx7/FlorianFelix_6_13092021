@@ -1,15 +1,7 @@
 const mongoose = require("mongoose");
 
-mongoose
-  .connect(
-    "mongodb+srv://flo_flxweb:Lauflo.126@cluster0.404ig.mongodb.net/myFirstDatabase?retryWrites=true&w=majority",
-    { useNewUrlParser: true, useUnifiedTopology: true }
-  )
-  .then(() => console.log("Connexion à MongoDB réussie !"))
-  .catch(() => console.log("Connexion à MongoDB échouée !"));
-
-const PostModel = mongoose.model(
-  "node-api",
+const PostsModel = mongoose.model(
+  "api-post",
   {
     author: {
       type: String,
@@ -19,12 +11,13 @@ const PostModel = mongoose.model(
       type: String,
       required: true,
     },
+
     date: {
-      type: Data,
+      type: Date,
       default: Date.now,
     },
   },
   "posts"
 );
 
-module.exports = { PostModel };
+module.exports = { PostsModel };
