@@ -5,9 +5,6 @@ const User = require("../models/User");
 
 // Logiques métiers pour les utilisateurs
 // Création de nouveaux utilisateurs (Post signup)
-app.get("/api/auth/signup", (req, res) => {
-  res.send("ok");
-});
 
 exports.signup = (req, res, next) => {
   // Hash du mot de passe avec bcrypt
