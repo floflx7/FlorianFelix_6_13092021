@@ -15,7 +15,9 @@
     "concurrently": "^6.2.1",
     "http-server": "^13.0.2",
     "live-server": "^1.2.1",
-    "node-sass": "^6.0.1",
+    "node-sass": "^6.0.1"
+  },
+  "devDependencies": {
     "run-script-os": "^1.1.6"
   }
 }

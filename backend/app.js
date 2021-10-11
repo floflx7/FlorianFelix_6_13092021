@@ -2,20 +2,19 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const path = require("path");
+const app = express();
 require("dotenv").config({ path: process.cwd() + "/.env" });
 
 const userRoutes = require("./routes/user");
 
 // Connexion à la base de données avec mongoose
-mongoose.connect(
-  "mongodb+srv://floflx:Lauflo.126@cluster0.tkpnv.mongodb.net/Cluster0?retryWrites=true&w=majority",
-  { useNewUrlParser: true },
-  (err) => {
-    if (!err) console.log("MongoDb connected");
-    else console.log("Connection error :" + err);
-  }
-);
-const app = express();
+mongoose
+  .connect(
+    "mongodb+srv://floflx:Lauflo.126@cluster0.tkpnv.mongodb.net/Cluster0?retryWrites=true&w=majority",
+    { useNewUrlParser: true, useUnifiedTopology: true }
+  )
+  .then(() => console.log("Connexion à MongoDB réussie !"))
+  .catch(() => console.log("Connexion à MongoDB échouée !"));
 
 // Définition de headers pour éviters les erreurs de CORS
 app.use((req, res, next) => {
@@ -30,6 +29,9 @@ app.use((req, res, next) => {
   );
   next();
 });
+
+let cors = require("cors");
+app.use(cors());
 
 app.use(bodyParser.json());
 
