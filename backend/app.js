@@ -3,8 +3,7 @@ const bodyParser = require("body-parser");
 const mongoose = require("mongoose");
 const path = require("path");
 const app = express();
-require("dotenv").config({ path: process.cwd() + "/.env" });
-
+const saucesRoutes = require("./routes/sauce");
 const userRoutes = require("./routes/user");
 
 // Connexion à la base de données avec mongoose
@@ -30,14 +29,11 @@ app.use((req, res, next) => {
   next();
 });
 
-let cors = require("cors");
-app.use(cors());
-
 app.use(bodyParser.json());
 
 // Enregistrement des routeurs
 app.use("/images", express.static(path.join(__dirname, "images")));
-
+app.use("/api/sauces", saucesRoutes);
 app.use("/api/auth", userRoutes);
 
 module.exports = app;
