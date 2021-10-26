@@ -1,23 +1,80 @@
-# HOT TAKES #
+# So Pekocko
 
-## Installation ##
+Une application d'avis gastronomique.
+    
+## Fonctionnalités
 
-Here are the dependancies you need to install:
-- NodeJS 12.14 or 14.0.
-- Angular CLI 7.0.2.
-- node-sass : make sure to use the corresponding version to NodeJS. For Noe 14.0 for instance, you need node-sass in version 4.14+.
+- L'utilisateur doit s'inscrire ou s'authentifier pour accéder à l'ensemble des sauces
+- L'utilisateur authentifier peut ajouter une sauce
+- Seul l'utilisateur ayant créer la sauce peut modifier ou supprimer la sauce
+- L'utilisateur peut voter à sa guise pour les sauces de son choix
 
-On Windows, these installations require to use PowerShell in administrator mode.
+## Sécurité
 
-The, clone this repo and run `npm install`.
+L'API doit respecter le RGPD et les standards OWASP.
 
+  
+## Lancer localement le frontend
 
-## Usage ##
+Cloner le projet dans un repertoire frontend
 
-Run `npm start`. This should both run the local server and launch your browser.
+```bash
+  git clone https://github.com/OpenClassrooms-Student-Center/dwj-projet6.git frontend
+```
 
-If your browser fails to launch, or shows a 404 error, navigate your browser to http://localhost:8080.
+Aller dans le répertoire frontend
 
-The app should reload automatically when you make a change to a file.
+```bash
+  cd frontend
+```
 
-Use `Ctrl+C` in the terminal to stop the local server.
+Installer les dépendences
+
+```bash
+  npm install
+```
+
+Installer Angular
+
+```bash
+  npm i angular
+```
+
+Démarrer
+
+```bash
+  npm run start
+```
+
+Rendez-vous sur http://localhost:8080/
+  
+## Lancer localement le backend
+
+Cloner le projet dans un repertoire backend
+
+```bash
+  git clone https://github.com/floflx7/FlorianFelix_6_13092021.git
+```
+
+Aller dans le répertoire backend
+
+```bash
+  cd backend
+```
+
+Installer les dépendences
+
+```bash
+  npm install
+```
+
+Démarrer le serveur
+
+```bash
+  nodemon server
+```
+## Tech Stack
+
+**Client:** Angular
+
+**Server:** NodeJS, ExpressJS, MongoDB
