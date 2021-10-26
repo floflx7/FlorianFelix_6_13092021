@@ -46,7 +46,7 @@ Démarrer
   npm run start
 ```
 
-Rendez-vous sur http://localhost:8080/
+Rendez-vous sur http://localhost:8081/ ou http://localhost:8080/
   
 ## Lancer localement le backend
 
