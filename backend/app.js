@@ -1,5 +1,6 @@
 const express = require("express");
 const bodyParser = require("body-parser");
+const helmet = require("helmet");
 const mongoose = require("mongoose");
 const path = require("path");
 const app = express();
@@ -14,6 +15,8 @@ mongoose
   )
   .then(() => console.log("Connexion à MongoDB réussie !"))
   .catch(() => console.log("Connexion à MongoDB échouée !"));
+
+app.use(helmet());
 
 // Définition de headers pour éviters les erreurs de CORS
 app.use((req, res, next) => {
