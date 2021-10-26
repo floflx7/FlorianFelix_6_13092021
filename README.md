@@ -1,4 +1,4 @@
-# So Pekocko
+# Piquante
 
 Une application d'avis gastronomique.
     
