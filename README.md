@@ -1,4 +1,4 @@
-# So Pekocko
+# Piquante
 
 Une application d'avis gastronomique.
     
@@ -46,7 +46,11 @@ Démarrer
   npm run start
 ```
 
+<<<<<<< HEAD
 Rendez-vous sur http://localhost:8081/
+=======
+Rendez-vous sur http://localhost:8081/ ou http://localhost:8080/
+>>>>>>> 6f2c831eb65109689e05807ca9c02ba8ce2659ea
   
 ## Lancer localement le backend
 
