@@ -7,12 +7,14 @@ const app = express();
 const saucesRoutes = require("./routes/sauce");
 const userRoutes = require("./routes/user");
 
+require("dotenv").config();
+
 // Connexion à la base de données avec mongoose
 mongoose
-  .connect(
-    "mongodb+srv://floflx:Lauflo.126@cluster0.tkpnv.mongodb.net/Cluster0?retryWrites=true&w=majority",
-    { useNewUrlParser: true, useUnifiedTopology: true }
-  )
+  .connect(process.env.DB_URI, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+  })
   .then(() => console.log("Connexion à MongoDB réussie !"))
   .catch(() => console.log("Connexion à MongoDB échouée !"));
 
