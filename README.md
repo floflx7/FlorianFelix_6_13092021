@@ -16,11 +16,11 @@ L'API doit respecter le RGPD et les standards OWASP.
   
 ## Lancer localement le frontend
 
-Cloner le projet dans un repertoire frontend
+Cloner le projet dans un repertoire
 
-```bash
-  git clone https://github.com/OpenClassrooms-Student-Center/dwj-projet6.git frontend
-```
+
+  git clone https://github.com/floflx7/FlorianFelix_6_13092021.git
+
 
 Aller dans le répertoire frontend
 
@@ -46,15 +46,9 @@ Démarrer
   npm run start
 ```
 
-Rendez-vous sur http://localhost:8080/
+Rendez-vous sur http://localhost:8081/
   
 ## Lancer localement le backend
-
-Cloner le projet dans un repertoire backend
-
-```bash
-  git clone https://github.com/floflx7/FlorianFelix_6_13092021.git
-```
 
 Aller dans le répertoire backend
 
