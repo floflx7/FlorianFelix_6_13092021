@@ -6,7 +6,7 @@ module.exports = (req, res, next) => {
     const decodedToken = jwt.verify(token, `${process.env.RND_TKN}`);
     const userId = decodedToken.userId;
     if (req.body.userId && req.body.userId !== userId) {
-      throw "User ID non valable !";
+      res.status(403).json({ error: "unauthorized request" });
     } else {
       next();
     }
